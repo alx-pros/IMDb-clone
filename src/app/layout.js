@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <Providers>
-          <Header />
+          <Suspense >
+            <Header />
+          </Suspense>
           <Navbar />
           <SearchBox />
           {children}
