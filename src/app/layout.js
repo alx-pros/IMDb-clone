@@ -20,14 +20,12 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/logo.png"/>
       </head>
       <body className={inter.className}>
-        <Suspense>
-          <Providers>
-            <Header />
-            <Navbar />
-            <SearchBox />
-            {children}
-          </Providers>
-        </Suspense>
+        <Providers>
+          <Header />
+          <Navbar />
+          <SearchBox />
+          {children}
+        </Providers>
       </body>
     </html>
   );
