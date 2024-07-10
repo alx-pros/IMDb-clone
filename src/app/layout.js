@@ -21,12 +21,12 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <Providers>
-          <Suspense >
-            <Header />
-          </Suspense>
+          <Header />
           <Navbar />
           <SearchBox />
-          {children}
+          <Suspense >
+            {children}
+          </Suspense>
         </Providers>
       </body>
     </html>
